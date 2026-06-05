@@ -5,6 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechInnovate Solutions</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+    @media (max-width: 768px) {
+      .nav-menu { background-color: rgba(26,26,46,0.98); backdrop-filter: blur(8px); transition: left 0.3s ease; }
+      .nav-menu.active { left: 0; height: calc(100vh - 70px); overflow-y: auto; }
+      .hamburger { display:flex; padding:0.25rem; }
+      .bar { transition: transform 0.3s ease, opacity 0.3s ease; }
+      .hamburger.active .bar:nth-child(1){ transform: translateY(6px) rotate(45deg); }
+      .hamburger.active .bar:nth-child(2){ opacity: 0; }
+      .hamburger.active .bar:nth-child(3){ transform: translateY(-6px) rotate(-45deg); }
+      .hero { background: linear-gradient(180deg, #2a2b6f 0%, #0f172a 100%); padding: 3rem 0; min-height: auto; }
+      .hero .container { grid-template-columns: 1fr; text-align:center; }
+      .hero-image { margin-top: 2rem; max-width:560px; margin-left:auto; margin-right:auto; }
+    }
+    @media (max-width:480px) {
+      .hero { background: #0f172a; padding:2rem 0; }
+      .hero-image { display:none; }
+      .cta-button { width:100%; padding: 1rem 1.25rem; }
+    }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
